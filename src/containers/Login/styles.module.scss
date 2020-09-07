@@ -1,0 +1,18 @@
+.wrapperLogin {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 15px;
+}
+
+.wrapperButtons {
+  width: 430px;
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+}

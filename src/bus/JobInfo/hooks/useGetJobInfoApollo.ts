@@ -2,7 +2,7 @@ import { useApolloClient } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import GET_JOB_INFO from "../schemes/GetJobInfo";
-import { IJobs } from "../interfaces";
+import { IJobs } from "../../Jobs/interfaces";
 
 interface RouteParams {
   id: string;

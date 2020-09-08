@@ -1,4 +1,7 @@
 export const book = Object.freeze({
   login: "/login",
-  home: "/home"
+  jobs: {
+    index: "/jobs",
+    jobInfo: "/jobs/:id"
+  }
 });

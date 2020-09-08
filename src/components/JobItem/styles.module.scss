@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.wrapperTitle {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: baseline;
+}
+
+.title {
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  color: #1876ac;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.company {
+  font-size: 12px;
+  line-height: 24px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

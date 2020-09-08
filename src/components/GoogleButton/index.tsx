@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import GoogleLogin, { GoogleLoginResponse } from "react-google-login";
 
+import { GOOGLE_ID } from "../../constants";
+
 import styles from "./styles.module.scss";
 
 interface GoogleButtonProps {
@@ -12,9 +14,9 @@ const GoogleButton: FC<GoogleButtonProps> = ({ callback }) => (
     {/* 
   // @ts-ignore */}
     <GoogleLogin
-      clientId="12564109019-m3aa1v0kb3ocj3opjuidu9u61idrlcbf.apps.googleusercontent.com"
-      buttonText="Login with Google"
+      clientId={GOOGLE_ID}
       onSuccess={callback}
+      buttonText="Login with Google"
     />
   </div>
 );

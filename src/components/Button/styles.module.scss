@@ -1,0 +1,21 @@
+.button {
+  width: 152px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #1876ac;
+}
+
+.disabled {
+  color: #1876ac;
+  background-color: #f5f5f5;
+  border: 1px solid #1876ac;
+}

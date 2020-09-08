@@ -1,20 +1,21 @@
 import gql from "graphql-tag";
 
 const GET_JOBS = gql`
-  query {
+  query GetJobs {
     jobs {
       id
       title
       description
-      applyUrl
-      slug
-      company {
-        name
-        slug
-        logoUrl
+      commitment {
+        title
       }
+
       locationNames
       userEmail
+      applyUrl
+      company {
+        name
+      }
     }
   }
 `;

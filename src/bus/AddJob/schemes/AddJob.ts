@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
-const GET_JOBS = gql`
-  query GetJobs {
-    jobs {
+const ADD_JOB = gql`
+  mutation PostJob($input: PostJobInput!) {
+    postJob(input: $input) {
       id
       title
       description
@@ -13,4 +13,4 @@ const GET_JOBS = gql`
   }
 `;
 
-export default GET_JOBS;
+export default ADD_JOB;

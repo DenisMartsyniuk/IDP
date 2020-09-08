@@ -4,9 +4,7 @@ import get from "lodash/get";
 import GET_JOBS from "../schemes/GetJobs";
 
 const useGetJobsApollo = () => {
-  const { loading, error, data } = useQuery(GET_JOBS, {
-    fetchPolicy: "network-only"
-  });
+  const { loading, error, data } = useQuery(GET_JOBS);
 
   const jobs = get(data, ["jobs"], []);
 

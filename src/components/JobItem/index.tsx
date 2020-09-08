@@ -17,7 +17,9 @@ const JobItem: FC<{ job: IJobs }> = ({ job }) => {
           {job.title}
         </Link>
 
-        <div className={styles.company}>in {job.company.name}</div>
+        {job.company && (
+          <div className={styles.company}>in {job.company.name}</div>
+        )}
       </div>
 
       <div className={styles.description}>{job.description}</div>

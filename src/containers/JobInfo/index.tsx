@@ -16,7 +16,9 @@ const JobInfo: FC = () => {
       </Link>
       <div className={styles.title}>JobInfo</div>
       <div className={styles.titleWork}>{job.title}</div>
-      <div className={styles.wrapperCompany}>Company: {job.company.name}</div>
+      {job.company && (
+        <div className={styles.wrapperCompany}>Company: {job.company.name}</div>
+      )}
       <div className={styles.description}>{job.description}</div>
     </div>
   );

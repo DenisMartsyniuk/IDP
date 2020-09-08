@@ -5,6 +5,7 @@ import Input from "../../components/Input";
 import Portal from "../../components/Portal";
 import Button from "../../components/Button";
 import addJobShape from "../../bus/AddJob/form/shapes";
+import useAddJobApollo from "../../bus/AddJob/hooks/useAddJobApollo";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 
 import styles from "./styles.module.scss";
@@ -13,6 +14,12 @@ const AddJob: FC<{ title: string; onClose: () => void }> = ({
   title,
   onClose
 }) => {
+  const { postJob } = useAddJobApollo();
+
+  const onSubmit = (values: any) => {
+    onClose();
+    postJob({ variables: { input: values } });
+  };
   return (
     <Portal>
       <div className={styles.wrapper}>
@@ -25,7 +32,7 @@ const AddJob: FC<{ title: string; onClose: () => void }> = ({
           <Formik
             initialValues={addJobShape.shape}
             validationSchema={addJobShape.schema}
-            onSubmit={values => console.log(values)}
+            onSubmit={values => onSubmit(values)}
           >
             {({
               values,

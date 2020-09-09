@@ -45,6 +45,13 @@ module.exports = {
               modules: true
             }
           },
+          {
+            loader: "@americanexpress/purgecss-loader",
+            options: {
+              paths: [path.join("src/**/*.{ts,tsx}")],
+              whitelistPatternsChildren: [/:global$/]
+            }
+          },
           "sass-loader"
         ]
       },

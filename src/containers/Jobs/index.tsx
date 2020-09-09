@@ -5,12 +5,17 @@ import Button from "../../components/Button";
 import { IJobs } from "../../bus/Jobs/interfaces";
 import JobItem from "../../components/JobItem/index";
 import useGetJobsApollo from "../../bus/Jobs/hooks/useGetJobsApollo";
+import useSelectJobApollo from "../../bus/Jobs/hooks/useSelectJobApollo";
 
 import styles from "./styles.module.scss";
 
 const Jobs: FC = () => {
   const [openModal, setOpenModal] = useState(false);
   const { data } = useGetJobsApollo();
+  const { selectActualJob } = useSelectJobApollo();
+
+  const onSelectActualJob = (checked: boolean, id: any) =>
+    selectActualJob(checked, id);
 
   return (
     <div className={styles.wrapper}>
@@ -25,7 +30,7 @@ const Jobs: FC = () => {
       </div>
 
       {data.map((job: IJobs) => (
-        <JobItem key={job.id} job={job} />
+        <JobItem job={job} key={job.id} onSelect={onSelectActualJob} />
       ))}
 
       {openModal && (

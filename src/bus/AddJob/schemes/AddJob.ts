@@ -6,6 +6,7 @@ const ADD_JOB = gql`
       id
       title
       description
+      checked @client
       company {
         name
       }

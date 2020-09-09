@@ -1,5 +1,7 @@
 declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
+    actual: string;
+    checkbox: string;
     company: string;
     description: string;
     title: string;

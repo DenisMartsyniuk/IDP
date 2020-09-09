@@ -8,7 +8,7 @@ import { AuthContext } from "../bus/Auth/context/authContext";
 const App: FC = () => {
   const { token } = useContext(AuthContext);
 
-  return <>{token ? <Private /> : <Public />}</>;
+  return token ? <Private /> : <Public />;
 };
 
 export default App;

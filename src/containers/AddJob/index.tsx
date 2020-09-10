@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Formik } from "formik";
+import { Input } from "@denis.martsyniuk/input/dist/";
 
-import Input from "../../components/Input";
 import Portal from "../../components/Portal";
 import Button from "../../components/Button";
 import addJobShape from "../../bus/AddJob/form/shapes";

@@ -32,6 +32,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "@babel/preset-typescript": "^7.10.4",
+    "@denis.martsyniuk/input": "^1.0.36",
     "@svgr/webpack": "^5.4.0",
     "@teamsupercell/typings-for-css-modules-loader": "^2.3.0",
     "@types/classnames": "^2.2.10",
